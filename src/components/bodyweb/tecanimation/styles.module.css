@@ -1,0 +1,21 @@
+.list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .list > div {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .list > div > div {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }

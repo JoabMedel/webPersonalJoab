@@ -1,0 +1,406 @@
+.full-menu-container{
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    transition: all ease 0.5s;
+}
+
+.side-bar-container{
+    position: relative;
+    transition: all ease 0.55s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+.side-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.849);
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(7px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 30%;
+    text-align: center;
+    font-weight:normal;
+    font-size: 15pt;
+    text-transform: uppercase;
+}
+
+ol{
+    margin-bottom: 40%;
+}
+.container-selector-menu{
+    display: none;
+}
+.body-menu{
+    background-color: rgba(0, 0, 0, 0.692);
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.616);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.icon-container svg{
+    animation-name: Core;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 170px;
+    cursor: pointer;
+}
+
+@keyframes Core {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(124, 60, 221, 0.445));
+    }
+    25% {
+        filter: drop-shadow(0 0 15px rgba(125, 60, 221, 0.973));
+    }
+    50%{
+        filter: drop-shadow(0 0 15px rgba(125, 60, 221, 0.973));
+    }
+    100%{
+        filter: drop-shadow(0 0 10px rgba(124, 60, 221, 0.445));
+    }
+}
+
+
+.Container-iconburger{
+    height: auto;
+    margin: 3%;
+    color: #ffffff;
+    font-size: 30pt;
+    filter: drop-shadow(0 0 4px #62fddc);
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+@media (min-width: 1200px){
+    .Container-iconburger{
+        display:none;
+    }
+
+    .body-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    .icon-container svg{
+        width: 320px;
+        transition: 0.5s all;
+    }
+
+    .icon-container svg:hover{
+        width: 350px;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-selector-menu{
+        color: #ffffff;
+        font-size: 12pt;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: lighter;
+        margin-left: 2%;
+        margin-right: 2%;
+        animation-name: coreMenuLandscape;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+        transition: 0.5s all;
+        display: block;
+    }
+
+    .container-selector-menu:hover{
+        color: rgb(144, 86, 146);
+        font-size: 15pt;
+        font-weight: lighter;
+        animation-name: onHoverMenu;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes onHoverMenu {
+        0% {
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.247);
+        }
+        25% {
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        50%{
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        100%{
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.164);
+        }
+    }
+    @keyframes coreMenuLandscape{
+        0% {
+            text-shadow: 0 0 4px #62fddb49;
+        }
+        25% {
+            text-shadow: 0 0 4px #62fddc;
+        }
+        50%{
+            text-shadow: 0 0 4px #62fddc;
+        }
+        100%{
+            text-shadow: 0 0 4px #62fddb49;
+        }
+    }
+    
+    .side-bar{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .Container-iconburger{
+        display:none;
+    }
+
+    .body-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    .icon-container svg{
+        width: 320px;
+        transition: 0.5s all;
+    }
+
+    .icon-container svg:hover{
+        width: 350px;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-selector-menu{
+        color: #ffffff;
+        font-size: 12pt;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: lighter;
+        margin-left: 2%;
+        margin-right: 2%;
+        animation-name: coreMenuLandscape;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+        transition: 0.5s all;
+        display: block;
+    }
+
+    .container-selector-menu:hover{
+        color: rgb(144, 86, 146);
+        font-size: 15pt;
+        font-weight: lighter;
+        animation-name: onHoverMenu;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes onHoverMenu {
+        0% {
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.247);
+        }
+        25% {
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        50%{
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        100%{
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.164);
+        }
+    }
+    @keyframes coreMenuLandscape{
+        0% {
+            text-shadow: 0 0 4px #62fddb49;
+        }
+        25% {
+            text-shadow: 0 0 4px #62fddc;
+        }
+        50%{
+            text-shadow: 0 0 4px #62fddc;
+        }
+        100%{
+            text-shadow: 0 0 4px #62fddb49;
+        }
+    }
+    
+    .side-bar{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Container-iconburger{
+        display:none;
+    }
+
+    .body-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    .icon-container svg{
+        width: 320px;
+        transition: 0.5s all;
+    }
+
+    .icon-container svg:hover{
+        width: 350px;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-selector-menu{
+        color: #ffffff;
+        font-size: 12pt;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: lighter;
+        margin-left: 2%;
+        margin-right: 2%;
+        animation-name: coreMenuLandscape;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+        transition: 0.5s all;
+        display: block;
+    }
+
+    .container-selector-menu:hover{
+        color: rgb(144, 86, 146);
+        font-size: 15pt;
+        font-weight: lighter;
+        animation-name: onHoverMenu;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes onHoverMenu {
+        0% {
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.247);
+        }
+        25% {
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        50%{
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        100%{
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.164);
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .Container-iconburger{
+        display:none;
+    }
+
+    .body-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    .icon-container svg{
+        width: 250px;
+        transition: 0.5s all;
+    }
+
+    .icon-container svg:hover{
+        width: 270px;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-selector-menu{
+        color: #ffffff;
+        font-size: 10pt;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: lighter;
+        margin-left: 2%;
+        margin-right: 2%;
+        animation-name: coreMenuLandscape;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+        transition: 0.5s all;
+        display: block;
+    }
+
+    .container-selector-menu:hover{
+        color: rgb(144, 86, 146);
+        font-size: 15pt;
+        font-weight: lighter;
+        animation-name: onHoverMenu;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes onHoverMenu {
+        0% {
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.247);
+        }
+        25% {
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        50%{
+            text-shadow: 0 0 20px rgba(183, 139, 250, 0.973);
+        }
+        100%{
+            text-shadow: 0 0 15px rgba(162, 113, 236, 0.164);
+        }
+    }
+}
